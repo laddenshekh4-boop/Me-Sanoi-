@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mr Sanoi — find cheap, highly-rated products and track price drops." />
+  <title>Mr Sanoi — Best Deals, Real Reviews, Lowest Prices</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Mr Sanoi home">
+        <img src="logo.png" alt="Mr Sanoi logo" />
+        <span>Mr <b>Sanoi</b></span>
+      </a>
+      <nav class="desktop-nav">
+        <a href="#deals">Deals</a><a href="#drops">Price Drops</a><a href="#categories">Categories</a><a href="#compare">Compare</a>
+      </nav>
+      <div class="nav-actions"><button class="icon-btn" title="Wishlist">♡</button><button class="login">Login</button><button class="menu" id="menuBtn">☰</button></div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">🔥 Smart shopping starts here</div>
+          <h1>Buy <span>Smart.</span><br>Pay Less.</h1>
+          <p>Find cheap products with great reviews, compare prices across stores and catch real price drops.</p>
+          <div class="search-wrap">
+            <span>⌕</span><input id="searchInput" type="search" placeholder="Search shoes, headphones, watches..." /><button id="searchBtn">Search</button>
+          </div>
+          <div class="quick-links"><button data-budget="499">Under ₹499</button><button data-budget="999">Under ₹999</button><button data-rating="4">⭐ 4★+ Products</button><button data-section="drops">🔥 Price Drops</button></div>
+        </div>
+        <div class="hero-card">
+          <div class="deal-top"><span>🔥 Today's Drop</span><span class="pill">-35%</span></div>
+          <div class="hero-product-img">🎧</div>
+          <h3>Premium Wireless Headphones</h3><div class="rating">★ 4.4 <small>12.5K reviews</small></div>
+          <div class="price-row"><strong>₹1,299</strong><del>₹1,999</del></div><div class="drop">↓ ₹700 cheaper today</div>
+          <button class="primary full" data-product="1">View Deal</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust container">
+      <div><b>₹</b><span>Cheap-first picks</span></div><div><b>★</b><span>Review focused</span></div><div><b>↓</b><span>Real price drops</span></div><div><b>↔</b><span>Store comparison</span></div>
+    </section>
+
+    <section class="section" id="deals"><div class="container"><div class="section-head"><div><p class="eyebrow orange">BEST VALUE</p><h2>Cheap & Highly Rated</h2><p>Low prices without ignoring ratings and review volume.</p></div><button class="outline" id="clearFilters">Clear filters</button></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="men">Men</button><button class="filter" data-filter="women">Women</button><button class="filter" data-filter="electronics">Electronics</button><button class="filter" data-filter="fashion">Fashion</button><select id="sortSelect"><option value="deal">Best deal</option><option value="price">Lowest price</option><option value="rating">Highest rating</option><option value="reviews">Most reviews</option><option value="drop">Biggest drop</option></select></div><div class="product-grid" id="productGrid"></div></div></section>
+
+    <section class="budget"><div class="container"><div class="section-head centered"><div><p class="eyebrow orange">SHOP BY BUDGET</p><h2>Find something under</h2></div></div><div class="budget-grid"><button data-budget="199"><span>Under</span><b>₹199</b><small>Daily essentials</small></button><button data-budget="499"><span>Under</span><b>₹499</b><small>Popular picks</small></button><button data-budget="999"><span>Under</span><b>₹999</b><small>Best value</small></button><button data-budget="1499"><span>Under</span><b>₹1,499</b><small>Premium deals</small></button></div></div></section>
+
+    <section class="section" id="drops"><div class="container"><div class="section-head"><div><p class="eyebrow orange">PRICE TRACKER</p><h2>Prices Just Dropped 🔥</h2><p>See how much products have fallen from their earlier price.</p></div><span class="live"><i></i> Live tracking</span></div><div class="drop-grid" id="dropGrid"></div></div></section>
+
+    <section class="section categories" id="categories"><div class="container"><div class="section-head centered"><div><p class="eyebrow orange">EXPLORE</p><h2>Shop by category</h2></div></div><div class="cat-grid"><button>👟<b>Shoes</b><small>Men & Women</small></button><button>🎧<b>Electronics</b><small>Audio & gadgets</small></button><button>⌚<b>Watches</b><small>Budget picks</small></button><button>👕<b>Fashion</b><small>Trending deals</small></button><button>💄<b>Beauty</b><small>Top rated</small></button><button>🏠<b>Home</b><small>Everyday value</small></button></div></div></section>
+
+    <section class="compare-section" id="compare"><div class="container compare-card"><div><p class="eyebrow orange">COMPARE BEFORE YOU BUY</p><h2>One product. Multiple stores.</h2><p>See current price, old price, rating and reviews together so you can choose with confidence.</p><button class="primary" id="compareDemo">Compare demo product</button></div><div class="mini-table"><div class="table-title">Wireless Headphones</div><div class="store-row"><span>Amazon</span><b>₹1,399</b><em>4.4★</em></div><div class="store-row best"><span>Flipkart</span><b>₹1,299</b><em>4.4★</em></div><div class="store-row"><span>Myntra</span><b>₹1,449</b><em>4.3★</em></div></div></div></section>
+
+    <section class="how"><div class="container"><div class="section-head centered"><div><p class="eyebrow orange">HOW IT WORKS</p><h2>Find better deals in 3 steps</h2></div></div><div class="steps"><div><span>01</span><h3>Search</h3><p>Search any product or browse by gender, category and budget.</p></div><div><span>02</span><h3>Compare</h3><p>Compare prices, ratings, reviews and price history across stores.</p></div><div><span>03</span><h3>Save</h3><p>Buy at the right price or set a target-price alert for later.</p></div></div></div></section>
+  </main>
+
+  <footer><div class="container footer-grid"><div><a class="brand footer-brand" href="#home"><img src="logo.png" alt="" /><span>Mr <b>Sanoi</b></span></a><p>Best deals. Real reviews. Lowest prices.</p></div><div><h4>Explore</h4><a href="#deals">Best Deals</a><a href="#drops">Price Drops</a><a href="#categories">Categories</a></div><div><h4>Shopping</h4><a href="#deals">Men</a><a href="#deals">Women</a><a href="#deals">Electronics</a></div><div><h4>Mr Sanoi</h4><a href="#home">About</a><a href="#compare">How it works</a><a href="#home">Contact</a></div></div><div class="copyright">© 2026 Mr Sanoi. Prices shown are demo data for this frontend prototype.</div></footer>
+
+  <div class="modal" id="modal"><div class="modal-box"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
